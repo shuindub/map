@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { 
   BarChart2, ShoppingCart, ShoppingBag, 
@@ -5,13 +6,14 @@ import {
   ScanSearch, Target, FileText, Settings, 
   Code, Download, ExternalLink, Zap
 } from 'lucide-react';
-import { AppSettings } from '../types';
+import { AppSettings, Tab } from '../types';
 import { translations } from '../utils/translations';
 
 interface ToolGroupProps {
   title: string;
   items: ToolItem[];
   settings: AppSettings;
+  onToolClick: (id: string) => void;
 }
 
 interface ToolItem {
@@ -22,7 +24,7 @@ interface ToolItem {
   external?: boolean;
 }
 
-const ToolGroup: React.FC<ToolGroupProps> = ({ title, items, settings }) => {
+const ToolGroup: React.FC<ToolGroupProps> = ({ title, items, settings, onToolClick }) => {
   const t = (key: string) => translations[settings.language][key] || key;
 
   return (
@@ -32,6 +34,7 @@ const ToolGroup: React.FC<ToolGroupProps> = ({ title, items, settings }) => {
         {items.map((item) => (
           <button 
             key={item.id}
+            onClick={() => onToolClick(item.id)}
             className="flex items-start p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-indigo-400 dark:hover:border-indigo-500 hover:shadow-md transition-all group text-left relative overflow-hidden"
           >
             <div className={`p-3 rounded-lg mr-4 flex-shrink-0 ${
@@ -76,8 +79,20 @@ const ToolGroup: React.FC<ToolGroupProps> = ({ title, items, settings }) => {
   );
 };
 
-const ToolsCatalog: React.FC<{ settings: AppSettings }> = ({ settings }) => {
+interface ToolsCatalogProps {
+  settings: AppSettings;
+  setActiveTab: (tab: Tab) => void;
+}
+
+const ToolsCatalog: React.FC<ToolsCatalogProps> = ({ settings, setActiveTab }) => {
   const t = (key: string) => translations[settings.language][key] || key;
+
+  const handleToolClick = (id: string) => {
+    if (id === 'ozon-an') {
+      setActiveTab(Tab.OZON_ANALYTICS);
+    }
+    // Add other redirects here
+  };
 
   const groups = [
     {
@@ -131,7 +146,13 @@ const ToolsCatalog: React.FC<{ settings: AppSettings }> = ({ settings }) => {
 
       <div className="space-y-2">
         {groups.map((group, idx) => (
-          <ToolGroup key={idx} title={group.title} items={group.items} settings={settings} />
+          <ToolGroup 
+            key={idx} 
+            title={group.title} 
+            items={group.items} 
+            settings={settings}
+            onToolClick={handleToolClick} 
+          />
         ))}
       </div>
     </div>

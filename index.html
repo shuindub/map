@@ -98,12 +98,14 @@
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
+          // Use a relative path './sw.js' to avoid origin mismatch issues in preview environments
+          navigator.serviceWorker.register('./sw.js')
             .then((registration) => {
               console.log('SW registered: ', registration);
             })
             .catch((registrationError) => {
-              console.log('SW registration failed: ', registrationError);
+              // Silently catch or log with less severity if strict origin checks fail
+              console.warn('SW registration skipped or failed:', registrationError.message);
             });
         });
       }

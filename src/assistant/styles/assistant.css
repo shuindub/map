@@ -1,0 +1,92 @@
+.assistant-overlay-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  pointer-events: none; /* Allow clicking through the empty space */
+}
+
+.assistant-panel {
+  pointer-events: auto;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  border-radius: 1.5rem;
+  width: 400px;
+  max-width: 90vw;
+  height: 600px;
+  max-height: 80vh;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: bottom right;
+}
+
+.assistant-panel.closed {
+  opacity: 0;
+  transform: scale(0.9) translateY(20px);
+  pointer-events: none;
+  height: 0;
+  margin: 0;
+}
+
+.assistant-fab {
+  pointer-events: auto;
+  width: 64px;
+  height: 64px;
+  border-radius: 2rem;
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.assistant-fab:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 30px -10px rgba(99, 102, 241, 0.5);
+}
+
+.assistant-fab:active {
+  transform: scale(0.95);
+}
+
+.assistant-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Scrollbar styling for the panel */
+.assistant-content::-webkit-scrollbar {
+  width: 6px;
+}
+.assistant-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+.assistant-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+/* Audio Visualizer Bars */
+.audio-bar {
+  width: 4px;
+  background-color: #a855f7;
+  border-radius: 2px;
+  animation: audio-wave 1s ease-in-out infinite;
+}
+
+@keyframes audio-wave {
+  0%, 100% { height: 10%; }
+  50% { height: 100%; }
+}

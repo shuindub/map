@@ -12,7 +12,7 @@ export const translations: Translations = {
     // Sidebar
     'nav.home': 'Home Website',
     'nav.dashboard': 'Dashboard',
-    'nav.finance': 'Financial Analytics', // New
+    'nav.finance': 'Financial Analytics', 
     'nav.tools': 'All Tools',
     'nav.products': 'My Products',
     'nav.niche': 'Niche Analysis',
@@ -88,28 +88,58 @@ export const translations: Translations = {
     'oracle.greeting': "Greetings, Partner. I am the MAP Oracle. I've analyzed the marketplace nodes. Ask me about trends, competitor weaknesses, or your next bestseller.",
     'oracle.export_history': 'Export History',
     
-    // Ozon Analytics
+    // Ozon Analytics (Updated v2.0)
     'ozon.title': 'External Analytics OZON',
-    'ozon.subtitle': 'Categories • Ozon Marketplace Analytics based on external data',
-    'ozon.guide': 'Instruction',
-    'ozon.currency': 'Currency',
-    'ozon.chart_sales': 'Sales by Category',
-    'ozon.chart_rev': 'Revenue by Category',
-    'ozon.col_cat': 'Category',
-    'ozon.col_rating': 'Rating',
-    'ozon.col_reviews': 'Reviews',
-    'ozon.col_sales': 'Sales',
-    'ozon.col_revenue': 'Revenue',
-    'ozon.col_price': 'Avg Price',
-    'ozon.col_sku': 'SKUs',
-    'ozon.col_sku_sold': 'SKUs with Sales',
-    'ozon.col_sku_pct': '% Sold',
-    'ozon.col_avg_sales': 'Sales/Item',
-    'ozon.col_avg_sales_sold': 'Sales/Sold Item',
-    'ozon.col_sellers': 'Sellers',
-    'ozon.col_sellers_sold': 'Sellers w/ Sales',
+    'ozon.subtitle': 'Comprehensive P&L, SKU 360, and Unit Economics',
+    'ozon.tab_dash': 'Dashboard (P&L)',
+    'ozon.tab_products': 'Product 360',
+    'ozon.tab_unit': 'Unit Economics',
+    'ozon.tab_data': 'Data Lake',
     
-    // Seller Home (New)
+    // Ozon P&L Rows
+    'pnl.revenue': 'Total Revenue',
+    'pnl.cogs': 'COGS',
+    'pnl.commission': 'Marketplace Commission',
+    'pnl.logistics': 'Logistics & Assembly',
+    'pnl.marketing': 'Advertising Costs',
+    'pnl.acquiring': 'Acquiring Fee',
+    'pnl.returns': 'Returns & Cancellations',
+    'pnl.gross_margin': 'Gross Margin',
+    'pnl.payroll': 'Payroll',
+    'pnl.rent': 'Rent',
+    'pnl.taxes': 'Taxes',
+    'pnl.software': 'Software',
+    'pnl.net_profit': 'Net Profit',
+    
+    // Ozon Product Columns
+    'oz.sku': 'SKU',
+    'oz.name': 'Product Name',
+    'oz.cat': 'Category',
+    'oz.abc': 'ABC',
+    'oz.status': 'Status',
+    'oz.sales': 'Sales Qty',
+    'oz.rev': 'Revenue',
+    'oz.margin': 'Margin %',
+    'oz.stock': 'Stock (FBO/FBS)',
+    'oz.turnover': 'Turnover',
+    
+    // Ozon Statuses
+    'status.active': 'Active',
+    'status.toxic': 'Toxic Stock',
+    'status.oos': 'Out of Stock',
+    'status.dead': 'Dead Stock',
+    
+    // Ozon Unit Econ
+    'unit.cogs': 'COGS (Input)',
+    'unit.pack': 'Pack (Input)',
+    'unit.dim': 'Dim (LxWxH)',
+    'unit.comm': 'Comm %',
+    'unit.log': 'Logistics',
+    'unit.curr': 'Curr Price',
+    'unit.target': 'Target Margin %',
+    'unit.min': 'Min Price',
+    
+    // Seller Home
     'home.banner_academy': 'New rules of advertising WB',
     'home.banner_academy_sub': 'All updates in one course',
     'home.banner_report': 'Free first report',
@@ -144,7 +174,7 @@ export const translations: Translations = {
     'home.reverse_logistics': 'Reverse Logistics',
     'home.close': 'Close',
 
-    // Finance Tab (New)
+    // Finance Tab
     'fin.title': 'Financial Summary',
     'fin.sales': 'Total Sales',
     'fin.expenses': 'Total Expenses',
@@ -202,7 +232,7 @@ export const translations: Translations = {
     'app.ai_active': 'AI Active',
     'title.dashboard': 'Dashboard Overview',
     'title.tools': 'Tools Ecosystem',
-    'title.finance': 'Financial Analytics', // New
+    'title.finance': 'Financial Analytics', 
     'title.products': 'Product Management',
     'title.oracle': 'MAP Oracle Intelligence',
     'title.competitors': 'Competitor Intelligence',
@@ -214,7 +244,7 @@ export const translations: Translations = {
     // Sidebar
     'nav.home': 'Главная',
     'nav.dashboard': 'Дашборд',
-    'nav.finance': 'Финансовая сводка', // New
+    'nav.finance': 'Финансовая сводка', 
     'nav.tools': 'Все инструменты',
     'nav.products': 'Мои товары',
     'nav.niche': 'Анализ ниш',
@@ -290,28 +320,58 @@ export const translations: Translations = {
     'oracle.greeting': "Приветствую, Партнер. Я Оракул MAP. Я проанализировал узлы маркетплейсов. Спроси меня о трендах, слабостях конкурентов или твоем следующем бестселлере.",
     'oracle.export_history': 'Скачать историю',
 
-    // Ozon Analytics
+    // Ozon Analytics (Updated v2.0)
     'ozon.title': 'Внешняя аналитика OZON',
-    'ozon.subtitle': 'Категории • Аналитика Ozon Marketplace по внешним данным',
-    'ozon.guide': 'Инструкция',
-    'ozon.currency': 'Валюта',
-    'ozon.chart_sales': 'Продажи по категориям',
-    'ozon.chart_rev': 'Выручка по категориям',
-    'ozon.col_cat': 'Категория',
-    'ozon.col_rating': 'Рейтинг',
-    'ozon.col_reviews': 'Отзывы',
-    'ozon.col_sales': 'Продажи',
-    'ozon.col_revenue': 'Выручка',
-    'ozon.col_price': 'Ср. Цена',
-    'ozon.col_sku': 'Товары (SKU)',
-    'ozon.col_sku_sold': 'Товары с продаж.',
-    'ozon.col_sku_pct': '% товаров с продаж.',
-    'ozon.col_avg_sales': 'Ср. продаж на товар',
-    'ozon.col_avg_sales_sold': 'Ср. продаж на товар с продаж.',
-    'ozon.col_sellers': 'Продавцы',
-    'ozon.col_sellers_sold': 'Продавцов с продаж.',
-
-    // Seller Home (New)
+    'ozon.subtitle': 'Комплексный P&L, SKU 360 и Юнит-экономика',
+    'ozon.tab_dash': 'Дашборд (P&L)',
+    'ozon.tab_products': 'Продукты 360',
+    'ozon.tab_unit': 'Юнит-Экономика',
+    'ozon.tab_data': 'Data Lake',
+    
+    // Ozon P&L Rows
+    'pnl.revenue': 'Выручка',
+    'pnl.cogs': 'Себестоимость товаров',
+    'pnl.commission': 'Комиссия маркетплейса',
+    'pnl.logistics': 'Логистика и сборка',
+    'pnl.marketing': 'Расходы на рекламу',
+    'pnl.acquiring': 'Эквайринг',
+    'pnl.returns': 'Возвраты и отмены',
+    'pnl.gross_margin': 'Маржинальная прибыль',
+    'pnl.payroll': 'ФОТ',
+    'pnl.rent': 'Аренда',
+    'pnl.taxes': 'Налоги',
+    'pnl.software': 'ПО и Сервисы',
+    'pnl.net_profit': 'Чистая прибыль',
+    
+    // Ozon Product Columns
+    'oz.sku': 'Артикул',
+    'oz.name': 'Наименование',
+    'oz.cat': 'Категория',
+    'oz.abc': 'ABC',
+    'oz.status': 'Статус',
+    'oz.sales': 'Продажи шт',
+    'oz.rev': 'Выручка',
+    'oz.margin': 'Маржа %',
+    'oz.stock': 'Остатки (FBO/FBS)',
+    'oz.turnover': 'Оборачиваемость',
+    
+    // Ozon Statuses
+    'status.active': 'Продается',
+    'status.toxic': 'Токсичный',
+    'status.oos': 'Out of Stock',
+    'status.dead': 'Мертвый',
+    
+    // Ozon Unit Econ
+    'unit.cogs': 'Себест. (Ввод)',
+    'unit.pack': 'Упак. (Ввод)',
+    'unit.dim': 'Габариты',
+    'unit.comm': 'Комиссия %',
+    'unit.log': 'Логистика',
+    'unit.curr': 'Тек. Цена',
+    'unit.target': 'Цель Маржа %',
+    'unit.min': 'Мин. Цена',
+    
+    // Seller Home
     'home.banner_academy': 'Новые правила рекламы WB',
     'home.banner_academy_sub': 'Все обновления рекламы в одном курсе',
     'home.banner_report': 'Бесплатно создадим первый отчет',
@@ -346,7 +406,7 @@ export const translations: Translations = {
     'home.reverse_logistics': 'Обратная логистика',
     'home.close': 'Закрыть',
 
-    // Finance Tab (New)
+    // Finance Tab
     'fin.title': 'Финансовая сводка',
     'fin.sales': 'Продажи',
     'fin.expenses': 'Расходы',
@@ -372,7 +432,7 @@ export const translations: Translations = {
     'land.nav_api': 'API',
     'land.signin': 'Войти',
     'land.hero_tag': 'Новый движок Oracle AI v2.0',
-    'land.hero_title': 'Видеть шире. Опережать рынок.',
+    'land.hero_title': 'Видеть шире. Обгонять рынок.',
     'land.hero_desc': 'Продвинутая аналитика маркетплейсов на базе MAP. Показываем то, что не видно другим: потерянную выручку, стоки конкурентов, поведение алгоритмов и многое другое.',
     'land.launch': 'Запустить Дашборд',
     'land.demo': 'Смотреть демо',
@@ -404,7 +464,7 @@ export const translations: Translations = {
     'app.ai_active': 'AI Активен',
     'title.dashboard': 'Обзор Дашборда',
     'title.tools': 'Экосистема Инструментов',
-    'title.finance': 'Финансовая Аналитика', // New
+    'title.finance': 'Финансовая Аналитика', 
     'title.products': 'Управление Товарами',
     'title.oracle': 'Интеллект MAP Оракула',
     'title.competitors': 'Разведка Конкурентов',

@@ -110,7 +110,11 @@ const OracleChat: React.FC<{ settings: AppSettings }> = ({ settings }) => {
         <Sparkles className="text-purple-600 dark:text-purple-400" size={20} />
         <h2 className="font-semibold text-slate-800 dark:text-slate-100">{t('oracle.title')}</h2>
         <div className="ml-auto flex items-center gap-2">
-           {settings.isAuthenticated && <HardDrive size={14} className="text-indigo-500" title="Saving to Drive" />}
+           {settings.isAuthenticated && (
+             <span title="Saving to Drive" className="flex items-center">
+                <HardDrive size={14} className="text-indigo-500" />
+             </span>
+           )}
            <span className="text-xs text-green-600 dark:text-green-400 bg-green-500/10 px-2 py-1 rounded-full border border-green-500/20">{t('oracle.online')}</span>
         </div>
       </div>
